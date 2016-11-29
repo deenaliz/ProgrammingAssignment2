@@ -1,3 +1,4 @@
+
 # Matrix inversion is usually a costly computation and there may be some benefit
 # to caching the inverse of a matrix rather than compute it repeatedly. The
 # following two functions are used to cache the inverse of a matrix.
@@ -11,10 +12,12 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL  # define inverse of matrix
+    
     set <- function(y) {   
       x <<- y
       inv <<- NULL
     }
+    
     # assign x, and calculate the inverse
     
     get <- function() x 
